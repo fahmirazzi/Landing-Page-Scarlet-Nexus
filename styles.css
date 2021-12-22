@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&family=Poppins:wght@300;500&display=swap");
+:root {
+  --orange: rgba(255, 94, 0, 1);
+  --orange-dark: rgb(165, 60, 0);
+  --orange-tranparent: rgba(255, 94, 0, 0.75);
+  --black: rgba(10, 10, 10, 1);
+  --black-transparent: rgba(8, 8, 8, 0.9);
+  --white: rgb(236, 236, 236);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(243, 235, 235);
+  font-family: Poppins, sans-serif;
+  /* outline: 2px solid red; */
+}
+
+h1,
+h2,
+button {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+body {
+  /* overflow: hidden; */
+}
+
+.container {
+  max-height: 100vh;
+  min-width: 100vw;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  min-height: 10%;
+  z-index: 100;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+#nav-bar {
+  text-align: center;
+}
+
+.nav-link {
+  list-style: none;
+}
+
+.link-item {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  transition: ease-in-out 150ms;
+  font-family: "Chakra Petch", sans-serif;
+  margin: 0 2em;
+}
+
+.link-item::after {
+  content: "";
+  position: absolute;
+  background-color: var(--orange);
+  height: 0.5em;
+  width: 100%;
+  left: -10%;
+  bottom: 0;
+  z-index: -1;
+
+  transition: transform 250ms cubic-bezier(1, -0.68, 0.41, 0.97);
+  transform-origin: left bottom;
+}
+
+.link-item:hover::after,
+.link-item:focus::after {
+  transform: scale(1.2, 2.6);
+}
+
+main {
+  min-height: 100vh;
+  background-image: url(https://images.alphacoders.com/114/thumb-1920-1142628.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7) 70%,
+    rgba(0, 0, 0, 0.5)
+  );
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 5rem 10rem;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin-top: 3rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(175, 1, 1, 0.075);
+  border-radius: 50px;
+  padding: 2rem;
+}
+
+.main-content h1 {
+  color: var(--orange-tranparent);
+  text-align: center;
+}
+.main-content p {
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.icons {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto 2em;
+  gap: 1rem;
+}
+
+.fab {
+  font-size: 1.5em;
+}
+
+.btn {
+  font-size: 16px;
+  background-color: var(--orange);
+  border: none;
+  padding: 0.75em 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 15rem;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transition: ease-in-out 300ms;
+  cursor: pointer;
+}
+
+.buy-btn {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+.subs-btn {
+  background-color: transparent;
+  border: 1px solid var(--orange);
+  margin-top: 1em;
+}
+
+.buy-btn:hover {
+  background-color: var(--orange-dark);
+}
+.subs-btn:hover {
+  background-color: var(--orange);
+}
+
+.gameplay {
+  padding-top: 1px;
+  background-color: var(--black);
+  min-height: 70vh;
+}
+
+.gameplay h1 {
+  text-align: center;
+  padding-top: 2em;
+  color: var(--orange-tranparent);
+}
+
+.gameplay-container {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.card {
+  padding: 20px 25px;
+  border-radius: 25px 25px 0 25px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.card p {
+  margin-bottom: 1em;
+}
+
+.card-1 {
+  background-image: url(https://gamerbraves.sgp1.cdn.digitaloceanspaces.com/2020/08/vlcsnap-2020-08-28-16h40m39s145-1024x576.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card-2 {
+  background-image: url(https://www.gematsu.com/wp-content/uploads/2020/11/Scarlet-Nexus-Play-Xbox_11-10-20.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card-3 {
+  background-image: url(https://blog.playstation.com/tachyon/2021/06/SNX_PlayStation_0TempHeroImage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card-4 {
+  background-image: url(https://gamerwk.sgp1.cdn.digitaloceanspaces.com/2021/07/Scarlet-Nexus-Review.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.footer {
+  min-height: 15vh;
+  background-color: var(--orange);
+  padding: 10px;
+}
+
+.subs-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.subs-container label {
+  font-size: 2em;
+  font-family: "Chakra Petch", sans-serif;
+  margin-bottom: 2em;
+}
+
+.subs-container input {
+  width: 100%;
+  border-radius: 25px;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ------------------------------------------------ */
+
+@media screen and (min-width: 1100px) {
+  .btn {
+    display: inline-block;
+    margin: 1em 0;
+  }
+
+  iframe {
+    position: relative;
+    margin-right: 15%;
+    width: 100%;
+    max-width: 1080px;
+    max-height: 720px;
+  }
+  .main-content {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-content h1 {
+    /* position: absolute; */
+    font-size: 3.5rem;
+    top: -18rem;
+    right: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    margin-top: 5rem;
+  }
+
+  .gameplay-container {
+    display: flex;
+  }
+
+  .card {
+    width: 25%;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header__container {
+    display: flex;
+    width: 80vw;
+    max-width: 1280px;
+    align-items: center;
+    height: auto;
+  }
+
+  img {
+    height: auto;
+  }
+
+  #nav-bar {
+    margin-left: auto;
+  }
+  .nav-link {
+    display: flex;
+  }
+  .nav-link a {
+    margin-left: 20px;
+  }
+
+  .main-content p {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
